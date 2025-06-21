@@ -1,0 +1,1335 @@
+PC 1 
+
+
+Welcome to Virtual PC Simulator, version 0.8.3
+Dedicated to Daling.
+Build time: Sep  9 2023 11:15:00
+Copyright (c) 2007-2015, Paul Meng (mirnshi@gmail.com)
+All rights reserved.
+
+VPCS is free software, distributed under the terms of the "BSD" licence.
+Source code and license can be found at vpcs.sf.net.
+For more information, please visit wiki.freecode.com.cn.
+
+Press '?' to get help.
+
+Executing the startup file
+
+
+PC1> ip 192.168.10.2 255.255.255.0 192.168.10.1
+Checking for duplicate address...
+PC1 : 192.168.10.2 255.255.255.0 gateway 192.168.10.1
+
+PC1> show ip
+
+NAME        : PC1[1]
+IP/MASK     : 192.168.10.2/24
+GATEWAY     : 192.168.10.1
+DNS         :
+MAC         : 00:50:79:66:68:00
+LPORT       : 20020
+RHOST:PORT  : 127.0.0.1:20021
+MTU         : 1500
+
+
+R1#ping 192.168.20.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.20.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/4/8 ms
+
+
+PC 2 
+
+
+Welcome to Virtual PC Simulator, version 0.8.3
+Dedicated to Daling.
+Build time: Sep  9 2023 11:15:00
+Copyright (c) 2007-2015, Paul Meng (mirnshi@gmail.com)
+All rights reserved.
+
+VPCS is free software, distributed under the terms of the "BSD" licence.
+Source code and license can be found at vpcs.sf.net.
+For more information, please visit wiki.freecode.com.cn.
+
+Press '?' to get help.
+
+Executing the startup file
+
+
+PC2>
+PC2> ip 192.168.20.2 255.255.255.0 192.168.20.1
+Checking for duplicate address...
+PC2 : 192.168.20.2 255.255.255.0 gateway 192.168.20.1
+
+PC2> show ip
+
+NAME        : PC2[1]
+IP/MASK     : 192.168.20.2/24
+GATEWAY     : 192.168.20.1
+DNS         :
+MAC         : 00:50:79:66:68:01
+LPORT       : 20022
+RHOST:PORT  : 127.0.0.1:20023
+MTU         : 1500
+
+R1#ping 192.168.10.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.10.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/4/8 ms
+
+R1
+
+Connected to Dynamips VM "R1" (ID 1, type c2600) - Console port
+Press ENTER to get the prompt.
+cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco 2610 (MPC860) processor (revision 2.2) with 155648K/8192K bytes of memory.
+Processor board ID FTX0945W0MY
+M860 processor: part number 0, mask 0
+5 Ethernet interfaces
+2 Serial(sync/async) interfaces
+32K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Serial0/0 placed in "shutdown" state
+SETUP: new interface Serial0/1 placed in "shutdown" state
+SETUP: new interface Ethernet1/0 placed in "shutdown" state
+SETUP: new interface Ethernet1/1 placed in "shutdown" state
+SETUP: new interface Ethernet1/2 placed in "shutdown" state
+SETUP: new interface Ethernet1/3 placed in "shutdown" state
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:06.771: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0                                            , changed state to up
+*Mar  1 00:00:06.779: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:06.787: %LINK-3-UPDOWN: Interface Serial0/0, changed state to up
+*Mar  1 00:00:06.795: %LINK-3-UPDOWN: Interface Serial0/1, changed state to up
+*Mar  1 00:00:06.803: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:06.807: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:06.815: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:06.823: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:07.235: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:07.836: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2600 Software (C2600-ADVENTERPRISEK9-M), Version 12.4(15)T1                                            4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Tue 17-Aug-10 05:40 by prod_rel_team
+*Mar  1 00:00:07.844: %SNMP-5-COLDSTART: SNMP agent on host R1 is undergoing a c                                            old start
+*Mar  1 00:00:08.401: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/                                            0, changed state to down
+*Mar  1 00:00:08.405: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0,                                             changed state to down
+*Mar  1 00:00:08.409: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1,                                             changed state to down
+*Mar  1 00:00:08.417: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            0, changed state to down
+*Mar  1 00:00:08.421: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            1, changed state to down
+*Mar  1 00:00:08.425: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            2, changed state to down
+*Mar  1 00:00:08.425: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            3, changed state to down
+*Mar  1 00:00:08.850: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Mar  1 00:00:08.854: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Mar  1 00:00:09.263: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to a                                            dministratively down
+*Mar  1 00:00:09.267: %LINK-5-CHANGED: Interface Serial0/0, changed state to adm                                            inistratively down
+*Mar  1 00:00:09.271: %LINK-5-CHANGED: Interface Serial0/1, changed state to adm                                            inistratively down
+*Mar  1 00:00:09.275: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to a                                            dministratively down
+*Mar  1 00:00:09.683: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to a                                            dministratively down
+*Mar  1 00:00:09.683: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to a                                            dministratively down
+*Mar  1 00:00:09.683: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to a                                            dministratively down
+R1#
+R1#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface ethernet 0/0
+R1(config-if)#ip address 192.168.20.1 255.255.255.0
+R1(config-if)#no shutdown
+R1(config-if)#inter
+*Mar  1 00:05:13.509: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+R1(config-if)#interf
+*Mar  1 00:05:14.511: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+R1(config-if)#interface ethernet 1/0
+R1(config-if)#ip address 192.168.40.2 255.255.255.0
+R1(config-if)#no shutdown
+R1(config-if)#
+*Mar  1 00:05:51.952: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:05:52.954: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+R1(config-if)#exit
+R1(config)#exit
+R1#sho
+*Mar  1 00:06:02.758: %SYS-5-CONFIG_I: Configured from console by console
+R1#show running
+Building configuration...
+
+Current configuration : 1156 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.20.1 255.255.255.0
+ half-duplex
+!
+interface Serial0/0
+ no ip address
+ shutdown
+!
+interface Serial0/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ ip address 192.168.40.2 255.255.255.0
+ half-duplex
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/3
+ no ip address
+ shutdown
+ half-duplex
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R1#
+R1#
+R1#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#router isis
+R1(config-router)# net 49.0001.0000.0000.0001.00
+R1(config-router)# net 49.0001.0000.0000.0001.00^Z
+R1#
+*Mar  1 00:11:59.832: %SYS-5-CONFIG_I: Configured from console by console
+R1#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#router isis
+R1(config-router)# net 49.0001.0000.0000.0001.00
+R1(config-router)#is-type level-2-only
+R1(config-router)#interface ethernet 0/0
+R1(config-if)#ip router isis
+R1(config-if)#exit
+R1(config)#write
+             ^
+% Invalid input detected at '^' marker.
+
+R1(config)#exit
+R1#w
+*Mar  1 00:13:13.112: %SYS-5-CONFIG_I: Configured from console by console
+R1#write
+Warning: Attempting to overwrite an NVRAM configuration previously written
+by a different version of the system image.
+Overwrite the previous NVRAM configuration?[confirm]
+Building configuration...
+[OK]
+R1#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ip router isis
+                   ^
+% Invalid input detected at '^' marker.
+
+R1(config)#router isis
+R1(config-router)#interface ethernet 1/0
+R1(config-if)#ip router isis
+R1(config-if)#exit
+R1(config)#exit
+R1#w
+*Mar  1 00:16:14.789: %SYS-5-CONFIG_I: Configured from console by console
+R1#write
+Building configuration...
+[OK]
+R1#show running
+Building configuration...
+
+Current configuration : 1258 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.20.1 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Serial0/0
+ no ip address
+ shutdown
+!
+interface Serial0/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ ip address 192.168.40.2 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/3
+ no ip address
+ shutdown
+ half-duplex
+!
+router isis
+ net 49.0001.0000.0000.0001.00
+ is-type level-2-only
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R2
+
+Connected to Dynamips VM "R2" (ID 2, type c2600) - Console port
+Press ENTER to get the prompt.
+cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco 2610 (MPC860) processor (revision 2.2) with 155648K/8192K bytes of memory.
+Processor board ID FTX0945W0MY
+M860 processor: part number 0, mask 0
+5 Ethernet interfaces
+2 Serial(sync/async) interfaces
+32K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Serial0/0 placed in "shutdown" state
+SETUP: new interface Serial0/1 placed in "shutdown" state
+SETUP: new interface Ethernet1/0 placed in "shutdown" state
+SETUP: new interface Ethernet1/1 placed in "shutdown" state
+SETUP: new interface Ethernet1/2 placed in "shutdown" state
+SETUP: new interface Ethernet1/3 placed in "shutdown" state
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:07.620: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0                                            , changed state to up
+*Mar  1 00:00:07.628: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:07.636: %LINK-3-UPDOWN: Interface Serial0/0, changed state to up
+*Mar  1 00:00:07.644: %LINK-3-UPDOWN: Interface Serial0/1, changed state to up
+*Mar  1 00:00:07.652: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:07.656: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:07.664: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:07.672: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:08.057: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:08.638: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2600 Software (C2600-ADVENTERPRISEK9-M), Version 12.4(15)T1                                            4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Tue 17-Aug-10 05:40 by prod_rel_team
+*Mar  1 00:00:08.646: %SNMP-5-COLDSTART: SNMP agent on host R2 is undergoing a c                                            old start
+*Mar  1 00:00:09.231: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/                                            0, changed state to down
+*Mar  1 00:00:09.235: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0,                                             changed state to down
+*Mar  1 00:00:09.239: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1,                                             changed state to down
+*Mar  1 00:00:09.247: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            0, changed state to down
+*Mar  1 00:00:09.251: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            1, changed state to down
+*Mar  1 00:00:09.251: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            2, changed state to down
+*Mar  1 00:00:09.251: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            3, changed state to down
+*Mar  1 00:00:09.671: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Mar  1 00:00:09.671: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Mar  1 00:00:10.088: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to a                                            dministratively down
+*Mar  1 00:00:10.092: %LINK-5-CHANGED: Interface Serial0/0, changed state to adm                                            inistratively down
+*Mar  1 00:00:10.096: %LINK-5-CHANGED: Interface Serial0/1, changed state to adm                                            inistratively down
+*Mar  1 00:00:10.100: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to a                                            dministratively down
+*Mar  1 00:00:10.104: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to a                                            dministratively down
+*Mar  1 00:00:10.513: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to a                                            dministratively down
+*Mar  1 00:00:10.513: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to a                                            dministratively down
+R2#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#interface ethernet 0/0
+R2(config-if)#ip address 192.168.10.1 255.255.255.0
+R2(config-if)#no shutdown
+R2(config-if)#inter
+*Mar  1 00:07:35.747: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:07:36.748: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+R2(config-if)#interface ethernet 1/0
+R2(config-if)#ip address 192.168.30.1 255.255.255.0
+R2(config-if)#no shutdown
+R2(config-if)#
+*Mar  1 00:08:14.735: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:08:15.736: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+R2(config-if)#exit
+R2(config)#exit
+R2#show
+*Mar  1 00:08:21.694: %SYS-5-CONFIG_I: Configured from console by console
+R2#show running
+Building configuration...
+
+Current configuration : 1156 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ half-duplex
+!
+interface Serial0/0
+ no ip address
+ shutdown
+!
+interface Serial0/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ ip address 192.168.30.1 255.255.255.0
+ half-duplex
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/3
+ no ip address
+ shutdown
+ half-duplex
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R2#
+R2#
+R2#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#router isis
+R2(config-router)#net 49.0002.0000.0000.0002.00
+R2(config-router)#is-type level-2-only
+R2(config-router)#interface 0/0
+                            ^
+% Invalid input detected at '^' marker.
+
+R2(config)#router isis
+R2(config-router)#net 49.0002.0000.0000.0002.00
+R2(config-router)#is-type level-2-only
+R2(config-router)#interface ethernert 0/0
+                            ^
+% Invalid input detected at '^' marker.
+
+R2(config)#router isis
+R2(config-router)#net 49.0002.0000.0000.0002.00
+R2(config-router)#is-type level-2-only
+R2(config-router)#interface ethernet 0/0
+R2(config-if)#ip router isis
+R2(config-if)#router isis
+R2(config-router)#net 49.0002.0000.0000.0002.00
+R2(config-router)#is-type level-2-only
+R2(config-router)#interface ethernet 1/0
+R2(config-if)#ip router isis
+R2(config-if)#exit
+R2(config)#exit
+R2#
+*Mar  1 00:18:26.401: %SYS-5-CONFIG_I: Configured from console by console
+R2#write
+Warning: Attempting to overwrite an NVRAM configuration previously written
+by a different version of the system image.
+Overwrite the previous NVRAM configuration?[confirm]
+Building configuration...
+[OK]
+R2#show running
+Building configuration...
+
+Current configuration : 1258 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Serial0/0
+ no ip address
+ shutdown
+!
+interface Serial0/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ ip address 192.168.30.1 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/3
+ no ip address
+ shutdown
+ half-duplex
+!
+router isis
+ net 49.0002.0000.0000.0002.00
+ is-type level-2-only
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R2#
+R2#
+R2#
+R2#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                192.168.10.1    YES manual up                    up
+Serial0/0                  unassigned      YES unset  administratively down down
+Serial0/1                  unassigned      YES unset  administratively down down
+Ethernet1/0                192.168.30.1    YES manual up                    up
+Ethernet1/1                unassigned      YES unset  administratively down down
+Ethernet1/2                unassigned      YES unset  administratively down down
+Ethernet1/3                unassigned      YES unset  administratively down down
+R2#
+R2#show running
+Building configuration...
+
+Current configuration : 1258 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Serial0/0
+ no ip address
+ shutdown
+!
+interface Serial0/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ ip address 192.168.30.1 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/3
+ no ip address
+ shutdown
+ half-duplex
+!
+router isis
+ net 49.0002.0000.0000.0002.00
+ is-type level-2-only
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R2#
+R2#
+R2#ip route 192.168.1.0 255.255.255.0 192.168.10.2
+    ^
+% Invalid input detected at '^' marker.
+
+R2#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#ip route 192.168.1.0 255.255.255.0 192.168.10.2
+R2(config)#ip route 192.168.2.0 255.255.255.0 192.168.30.2
+R2(config)#wxit
+            ^
+% Invalid input detected at '^' marker.
+
+R2(config)#exit
+R2#wr
+*Mar  1 00:29:01.250: %SYS-5-CONFIG_I: Configured from console by console
+R2#write memory
+Building configuration...
+[OK]
+R2#ping 192.168.20.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.20.2, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+R2#
+
+R3 
+
+Connected to Dynamips VM "R3" (ID 3, type c2600) - Console port
+Press ENTER to get the prompt.
+cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco 2610 (MPC860) processor (revision 2.2) with 155648K/8192K bytes of memory.
+Processor board ID FTX0945W0MY
+M860 processor: part number 0, mask 0
+5 Ethernet interfaces
+2 Serial(sync/async) interfaces
+32K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Serial0/0 placed in "shutdown" state
+SETUP: new interface Serial0/1 placed in "shutdown" state
+SETUP: new interface Ethernet1/0 placed in "shutdown" state
+SETUP: new interface Ethernet1/1 placed in "shutdown" state
+SETUP: new interface Ethernet1/2 placed in "shutdown" state
+SETUP: new interface Ethernet1/3 placed in "shutdown" state
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:07.636: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0                                            , changed state to up
+*Mar  1 00:00:07.644: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:07.652: %LINK-3-UPDOWN: Interface Serial0/0, changed state to up
+*Mar  1 00:00:07.660: %LINK-3-UPDOWN: Interface Serial0/1, changed state to up
+*Mar  1 00:00:07.668: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:07.676: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:07.684: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:07.688: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:08.101: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:08.658: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2600 Software (C2600-ADVENTERPRISEK9-M), Version 12.4(15)T1                                            4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Tue 17-Aug-10 05:40 by prod_rel_team
+*Mar  1 00:00:08.666: %SNMP-5-COLDSTART: SNMP agent on host R3 is undergoing a c                                            old start
+*Mar  1 00:00:09.255: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/                                            0, changed state to down
+*Mar  1 00:00:09.259: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0,                                             changed state to down
+*Mar  1 00:00:09.263: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1,                                             changed state to down
+*Mar  1 00:00:09.271: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            0, changed state to down
+*Mar  1 00:00:09.275: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            1, changed state to down
+*Mar  1 00:00:09.279: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            2, changed state to down
+*Mar  1 00:00:09.283: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/                                            3, changed state to down
+*Mar  1 00:00:09.707: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Mar  1 00:00:09.707: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Mar  1 00:00:10.120: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to a                                            dministratively down
+*Mar  1 00:00:10.124: %LINK-5-CHANGED: Interface Serial0/0, changed state to adm                                            inistratively down
+*Mar  1 00:00:10.128: %LINK-5-CHANGED: Interface Serial0/1, changed state to adm                                            inistratively down
+*Mar  1 00:00:10.541: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to a                                            dministratively down
+*Mar  1 00:00:10.541: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to a                                            dministratively down
+*Mar  1 00:00:10.541: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to a                                            dministratively down
+*Mar  1 00:00:10.541: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to a                                            dministratively down
+R3#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#interface ethernet 0/0
+R3(config-if)#ip address 192.168.30.2 255.255.255.0
+R3(config-if)#no shutdown
+R3(config-if)#
+*Mar  1 00:09:54.718: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+R3(config-if)#
+*Mar  1 00:09:55.720: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+R3(config-if)#interface ethernet 1/0
+R3(config-if)#ip address 192.168.40.1 255.255.255.0
+R3(config-if)#no shutdown
+R3(config-if)#
+*Mar  1 00:10:39.708: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:10:40.710: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+R3(config-if)#exit
+R3(config)#exit
+R3#
+*Mar  1 00:10:47.088: %SYS-5-CONFIG_I: Configured from console by console
+R3#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#router isis
+R3(config-router)#net 49.0003.0000.0000.0003.00
+R3(config-router)#is-type level-2-only
+R3(config-router)#interface ethernet 0/0
+R3(config-if)#ip router isis
+R3(config-if)#router isis
+R3(config-router)#net 49.0003.0000.0000.0003.00
+R3(config-router)#is-type level-2-only
+R3(config-router)#interface ethernet 1/0
+R3(config-if)#ip router isis
+R3(config-if)#exit
+R3(config)#exit
+R3#write
+*Mar  1 00:21:03.058: %SYS-5-CONFIG_I: Configured from console by console
+R3#write
+Warning: Attempting to overwrite an NVRAM configuration previously written
+by a different version of the system image.
+Overwrite the previous NVRAM configuration?[confirm]
+Building configuration...
+[OK]
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#show running
+Building configuration...
+
+Current configuration : 1258 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.30.2 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Serial0/0
+ no ip address
+ shutdown
+!
+interface Serial0/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ ip address 192.168.40.1 255.255.255.0
+ ip router isis
+ half-duplex
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet1/3
+ no ip address
+ shutdown
+ half-duplex
+!
+router isis
+ net 49.0003.0000.0000.0003.00
+ is-type level-2-only
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R3#
+R3#
+R3#
+R3#
+R3#
+R3#show isis neighbors
+
+System Id      Type Interface   IP Address      State Holdtime Circuit Id
+R3#show ip route isis
+
+R3#show ip route isis
+
+R3#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#interface ethernet 0/0
+R3(config-if)#ip address 192.168.30.2 255.255.255.0
+R3(config-if)#no shutdown
+R3(config-if)#exit
+R3(config)#exit
+R3#config
+*Mar  1 00:33:46.714: %SYS-5-CONFIG_I: Configured from console by console
+R3#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#interface ethernet 1/0
+R3(config-if)#ip address 192.168.20.1 255.255.255.0
+R3(config-if)#no sh
+*Mar  1 00:34:12.745: %IP-4-DUPADDR: Duplicate address 192.168.20.1 on Ethernet1/0, sourced by c801.377a.0000
+R3(config-if)#no shutdown
+R3(config-if)#exit
+R3(config)#exit
+R3#co
+*Mar  1 00:34:28.490: %SYS-5-CONFIG_I: Configured from console by console
+R3#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#
+R3(config)#ip route 192.168.1.0 255.255.255.0 192.168.30.1
+R3(config)#
+*Mar  1 00:34:44.180: %IP-4-DUPADDR: Duplicate address 192.168.20.1 on Ethernet1/0, sourced by c801.377a.0000
+R3(config)#ip route 192.168.10.0 255.255.255.0 192.168.30.1
+R3(config)#exit
+R3#write
+*Mar  1 00:35:03.199: %SYS-5-CONFIG_I: Configured from console by console
+R3#write memory]
